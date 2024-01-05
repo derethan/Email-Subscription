@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+  }
+
+  .header_BG {
+    background-position: center;
+    background-size: cover;
+    background-image: url("../img/header_BG.jpg");
+    min-height: 75%;
+  }
+
+/* Positions The Text on the Header */
+.logo_POS {position:absolute;top:50%;left:30%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+
+
+/* Styles the Navigation Links */
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+  background-color: #6F4E37;
+  text-align: center;
+}
+ li {
+  display: inline-block;
+  border-right: 1px solid rgba(219, 219, 219, 0.296);
+  width: 20%;
+}
+ li:last-child {
+  border-right: none;
+}
+ li a {
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: azure;
+
+}
+
+/* Page Titles */
+.tag {
+  background-color:#6F4E37;
+  color:#fff;
+  display:inline-block;
+  padding-left:8px;
+  padding-right:8px;
+  text-align:center;
+  letter-spacing:4px;
+}
+
+footer {
+  background-color: #6F4E37;
+  width: 100%;
+  height: 30px;
+  padding: 0%;
+  margin: 0%;
+  
+}

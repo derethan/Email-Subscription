@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Confirmation</title>
+</head>
+<body>
+  <h1>Email Confirmation</h1>
+
+  
+  <script>
+    // Extract the email and token from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const email = urlParams.get('email');
+    const token = urlParams.get('token');
+
+    // Send a request to your server to verify the subscription
+    fetch(`http://127.0.0.1:3001/confirm?email=${email}&token=${token}`, { method: 'GET' }) // Make GET request to the server - Change To URL of Endpoint Server
+    
+      .then((response) => {
+
+        if (response.ok) {
+          document.body.innerHTML = '<h2>Thank you for confirming your subscription!</h2>';
+        } else {
+          document.body.innerHTML = '<h2>Subscription verification failed. Please try again later.</h2>';
+        }
+
+      })
+
+      .catch((error) => {
+        document.body.innerHTML = '<h2>There was an Error with the verification process. Please try again later.</h2>';
+      }); 
+
+
+  </script>
+</body>
+</html>
